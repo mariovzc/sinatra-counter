@@ -1,9 +1,6 @@
 require 'sinatra'
-$count = 0
+
 get '/' do
-  erb :index
-end
-post '/' do
-  $count += 1
+  @number = params[:number]
   erb :index
 end
